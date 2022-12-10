@@ -1,0 +1,946 @@
+<!DOCUMENT><html amp>
+<head class="head">
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <title> หวยเมต้า </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&amp;family=Black+Ops+One&amp;family=Fredoka+One&amp;family=Gugi&amp;family=Happy+Monkey&amp;family=Jua&amp;family=Kanit:wght@500&amp;family=Libre+Barcode+128+Text&amp;family=Londrina+Shadow&amp;family=Michroma&amp;family=Noto+Sans+Symbols+2&amp;family=Rammetto+One&amp;family=Rampart+One&amp;family=Righteous&amp;family=Rubik+Glitch&amp;family=Rubik+Moonrocks&amp;family=Rubik+Wet+Paint&amp;family=Saira+Stencil+One&amp;family=Sirin+Stencil&amp;family=Tapestry&amp;family=Wallpoet&amp;family=Zen+Dots&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fontawesome.com/v4/assets/font-awesome/css/font-awesome.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <meta data-n-head="ssr" charset="utf-8">
+    <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Graduate&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Black+Ops+One&family=Fredoka+One&family=Gugi&family=Happy+Monkey&family=Jua&family=Kanit:wght@500&family=Libre+Barcode+128+Text&family=Londrina+Shadow&family=Michroma&family=Noto+Sans+Symbols+2&family=Rammetto+One&family=Rampart+One&family=Righteous&family=Rubik+Glitch&family=Rubik+Moonrocks&family=Rubik+Wet+Paint&family=Saira+Stencil+One&family=Sirin+Stencil&family=Tapestry&family=Wallpoet&family=Zen+Dots&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Graduate&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Black+Ops+One&family=Fredoka+One&family=Gugi&family=Happy+Monkey&family=Jua&family=Kanit:wght@500&family=Libre+Barcode+128+Text&family=Londrina+Shadow&family=Michroma&family=Noto+Sans+Symbols+2&family=Rammetto+One&family=Rampart+One&family=Righteous&family=Rubik+Glitch&family=Rubik+Moonrocks&family=Rubik+Wet+Paint&family=Saira+Stencil+One&family=Sirin+Stencil&family=Tapestry&family=Wallpoet&family=Zen+Dots&display=swap');
+        .accordion-item,
+        .card-yeeke {
+            border: none !important;
+        }
+        .accordion-item:last-of-type,
+        .accordion-item:first-of-type {
+            border-radius: 0 !important;
+        }
+
+        .card-header:first-child {
+            border-radius: calc(0.5rem) calc(0.5rem) calc(0.5rem) calc(0.5rem);
+        }
+        * {
+            font-family: 'Saira Stencil One', cursive;
+        }
+
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container,
+        .container-fluid,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400&display=swap');
+        * {
+            text-decoration: none;
+            font-family: 'serif', sans-serif;
+        }
+
+        .fontnumber {
+            font-family: 'Saira Stencil One', cursive !important;
+            /* font-family: 'serif;', cursive !important; */
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #0059a5;
+            border-color: #005cab;
+        }
+
+        .btn-success {
+            color: #fff;
+            background-color: #00b500;
+            border-color: #00b500;
+        }
+
+        .btn-danger {
+            color: #fff;
+            background-color: #d70000;
+            border-color: #b50000;
+        }
+
+        .btn-pm {
+            background-image: linear-gradient(to right, #0059a5, #0071c2, #007bd5, #0079d0, #0071c1, #0059a5) !important;
+            box-shadow: 0 1px 1px 1px #011d007d;
+            border-color: #0000000f;
+            text-shadow: 1px 1px 2px #000000c4;
+        }
+
+        .btn-blue {
+            background-image: linear-gradient(to right, #0059a5, #0075c9, #0080d8, #007ed5, #0081d9, #0059a5) !important;
+            box-shadow: 0 1px 1px 1px #011d007d;
+            border-color: #0000000f;
+            text-shadow: 1px 1px 2px #000000c4;
+        }
+
+        .btn-red {
+            background-image: linear-gradient(to right, #7e0000, #c20000, #ff0000, #ff0000, #d90000, #880000) !important;
+            box-shadow: 0 1px 1px 1px #011d007d;
+            border-color: #0000000f;
+            text-shadow: 1px 1px 2px #000000c4;
+        }
+
+        .btn-green {
+            background-image: linear-gradient(to right, #137e00, #1ec200, #62ff00, #61ff00, #37d900, #158800) !important;
+            box-shadow: 0 1px 1px 1px #011d007d;
+            border-color: #0000000f;
+            text-shadow: 1px 1px 2px #000000c4;
+        }
+
+        .btn-gold {
+            background-image: linear-gradient(to right, #a46400, #eaa700, #ffbf00, #f7b600, #eea900, #a37500) !important;
+            box-shadow: 0 1px 1px 1px #011d007d;
+            border-color: #0000000f;
+            text-shadow: 1px 1px 2px #000000c4;
+        }
+
+        .btn-puple {
+            background-image: linear-gradient(to right, #810aff, #6900ea, #6900f6, #6800f7, #7100ee, #6100a3) !important;
+            box-shadow: 0 1px 1px 1px #011d007d;
+            border-color: #0000000f;
+            text-shadow: 1px 1px 2px #000000c4;
+        }
+
+        .btn-yellow {
+            color: #fff;
+            background-color: #ffc107;
+            border-color: #ffac00;
+        }
+
+        .btn-yellow {
+            color: #fff;
+            background-color: #ffc107;
+            border-color: #ffac00;
+        }
+
+        .lotto-card2 {
+            width: 100%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .lotto-card2 {
+            border: 2px solid white;
+            border-radius: 7px 7px 7px 7px !important;
+            overflow: hidden;
+            box-shadow: rgba(255, 255, 255, 0.5) 0 0 10px;
+        }
+
+        .lotto-card2:hover,
+        .lotto-card2:focus {
+            box-shadow: #555 0px 0px 10px;
+            /* border: 2px solid rgba(0,0,0,0.5); */
+        }
+
+        .lotto-head2.lotto-yeekee2 {
+            /* background-color: #dc3545; */
+            border: #aa1423 1px solid;
+            border-radius: 5px 5px 0px 0px !important;
+            background: #ED213A;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ED213A, #93291E);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .lotto-head2 {
+            width: 100%;
+            display: block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 5px;
+            color: white;
+            text-align: center;
+            text-shadow: rgb(0 0 0 / 30%) 1px 1px 0;
+        }
+
+        .lotto-time {
+
+            width: 100%;
+            display: flex;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            padding: 5px;
+            background: white;
+            border: #ccc 1px solid;
+            border-top: none;
+            text-align: center;
+            font-size: 27px;
+            line-height: 30px;
+            color: #bbb;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .lotto-close {
+            filter: opacity(50%) grayscale(50%);
+        }
+
+        .lotto-close .lotto-time {
+            background: #dc354533;
+        }
+
+        .lotto-close .text-success {
+            color: #890000 !important
+        }
+
+        .text-success {
+            color: #28a745 !important;
+        }
+
+        .ribbon-lotto {
+            background: rgb(183 255 0);
+            height: 29px;
+            width: auto;
+            display: inline-block;
+            position: absolute;
+            color: #000000;
+            line-height: 24px;
+            border-radius: 0px 33px 33px 0px;
+            padding: 0px 15px 0px 10px;
+            border-style: outset;
+            margin-top: 2px;
+            border: 2px #ae00008a outset;
+            border-left: rgba(0, 0, 0, .3) 1px solid;
+            font-size: 13px;
+        }
+
+        .ribbon-lotto i {
+            font-size: 14px;
+        }
+
+        .card {
+            position: relative !important;
+            display: flex !important;
+            flex-direction: column !important;
+            min-width: 0 !important;
+            word-wrap: break-word !important;
+            background-color: #079795 !important;
+            background-clip: border-box !important;
+            border: 1px solid rgb(143 187 7);
+            border-radius: 0.25rem !important;
+            background: linear-gradient(52deg, #078485 1rem, #ffffff 0%) !important;
+            margin: 3px;
+        }
+
+
+        .ribbon-lotto span.round {
+            font-size: 10px;
+            line-height: 10px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            background: rgba(0, 0, 0, .5);
+            color: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            padding: 1px 2px;
+            padding-bottom: 3px;
+            margin-top: -2px;
+            margin-right: 2px;
+            font-family: tahoma;
+            transform: scaleX(0.90);
+        }
+
+        .card-header {
+            padding: 0.1rem 0.5rem;
+            margin-bottom: 0;
+            background-color: rgba(0, 0, 0, .03);
+            border-bottom: 1px solid rgba(0, 0, 0, .125);
+        }
+
+        .badge {
+            font-weight: 200 !important;
+            padding: 0.25em 0.45em !important;
+            margin-top: 4px;
+        }
+
+        .badge-dark {
+            color: #fff;
+            background-color: #343a40;
+        }
+
+        .lineh10 {
+            line-height: 10px;
+        }
+
+        .font12 {
+            font-size: 10px !important;
+        }
+
+
+        @keyframes example2 {
+            0% {
+                top: 0px;
+            }
+
+            25% {
+
+                top: -2px;
+            }
+
+            50% {
+                top: 0px;
+                background: linear-gradient(135deg, rgb(247 96 0), #ff8d00, rgb(255 156 7), rgb(255 141 0));
+            }
+
+            75% {
+                top: -2px;
+            }
+
+            100% {
+                top: 0px;
+            }
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .btn {
+            text-decoration: none !important;
+        }
+
+        .gameclose {
+            background: linear-gradient(135deg, rgb(247 96 0), #ff8d00, rgb(255 156 7), rgb(255 141 0));
+        }
+
+        .gameopen {
+            background: linear-gradient(135deg, rgb(0 247 151), #00ff2d, rgb(7 255 110), rgb(0 255 117));
+        }
+
+        .boxclose {
+            /* mix-blend-mode: luminosity; */
+            opacity: 0.5;
+        }
+
+        .accordion-item {
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, .125);
+            background: linear-gradient(135deg, #310000, rgb(51 0 0), rgb(93 0 0), #600000, rgb(37 0 0));
+            ;
+        }
+
+        .accordion-button {
+            /* padding: 15px 15px 0px; */
+            /* justify-content: space-evenly; */
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+            /* align-items: center; */
+
+            /* padding: 5px; */
+            /* background: linear-gradient(160deg, #ffb60fad, #ffdf7efa, #ffffffe0, #ffe19bfc, #ffbb00b3), url(https://png.pngtree.com/thumb_back/fh260/background/20210715/pngtree-honeycomb-geometric-red-stereo-halo-hexagon-background-image_742350.jpg); */
+            background-size: 100%;
+            /* background-position: top; */
+            /* color: black; */
+            /* font-weight: bolder; */
+            /* font-size: 26px; */
+            /* padding: 10px; */
+            border: 2px solid #100e0e;
+
+        }
+
+        h4 {
+            color: #fff;
+        }
+
+        svg {
+            display: block;
+            font: 7.5em 'Mitr';
+            margin: 0 auto;
+        }
+
+        .web-coder-skull {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 20% 20%;
+            stroke-width: 5px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 5.5s infinite linear;
+        }
+
+        .web-coder-skull:nth-child(5) {
+            stroke: #003ca0;
+            animation-delay: -5s;
+        }
+
+        .web-coder-skull {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 20% 20%;
+            stroke-width: 5px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 5s infinite linear;
+        }
+
+        .web-coder-skull:nth-child(6) {
+            stroke: #263238;
+            animation-delay: -1;
+        }
+
+        .web-coder-skull:nth-child(2) {
+            stroke: #26abe2;
+            animation-delay: -2s;
+        }
+
+        .web-coder-skull:nth-child(3) {
+            stroke: orange;
+            animation-delay: -3s;
+        }
+
+        .web-coder-skull:nth-child(4) {
+            stroke: red;
+            animation-delay: -4s;
+        }
+
+        .web-coder-skull:nth-child(5) {
+            stroke: #fff;
+            animation-delay: -5s;
+        }
+
+        .web-coder-skull:nth-child(1) {
+            stroke: green;
+            animation-delay: -1s;
+        }
+
+
+        @keyframes stroke-offset {
+            100% {
+                stroke-dashoffset: -35%;
+            }
+        }
+
+        @keyframes shakeY {
+
+            0%,
+            100% {
+                -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                -webkit-transform: translate3d(0, 50px, 0);
+                transform: translate3d(0, -30px, 0);
+            }
+
+            20%,
+            40%,
+            60%,
+            80%,
+            100% {
+                -webkit-transform: translate3d(0, 50px, 0);
+                transform: translate3d(0, 30px, 0);
+            }
+        }
+
+        .animate__animated {
+            animation-iteration-count: infinite;
+            -webkit-animation-duration: 1s;
+        }
+
+        .number {
+            width: 35px;
+            font-weight: bold;
+            font-size: 34px;
+            display: flex;
+            justify-content: center;
+            border: 1px outset;
+            border-radius: 4px;
+            overflow: hidden;
+            border-color: #f0ffff47;
+            background: #000000;
+            margin: 5px;
+
+            box-shadow: 0 0px 1px 1px #ffffff6e;
+        }
+
+        .number span {
+            font-family: 'Graduate', cursive !important;
+        }
+
+        .btn-check:focus+.btn,
+        .btn:focus {
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%) !important;
+        }
+
+        .font20 {
+            font-size: 20 !important;
+        }
+
+        .type_pratade {
+            width: 100%;
+            position: absolute;
+            max-width: 18px;
+            margin-top: 3px;
+            margin-left: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .lotto-head2 {
+                font-size: 0.9rem;
+                text-align: center;
+                padding-right: 0.5rem;
+                line-height: 0.9rem;
+            }
+
+            .ribbon-lotto {
+                height: unset;
+                width: auto;
+                display: inline-block;
+                position: absolute;
+                line-height: 1.6rem;
+                border-radius: 60px;
+                padding: 4px;
+                border-style: outset;
+                margin-top: 0.15rem;
+                border: 2px #ae00008a outset;
+                border-left: rgba(0, 0, 0, .3) 1px solid;
+                font-size: 0.6rem;
+                color: white;
+            }
+        }
+
+        .oo {
+            background-color: #dc3545;
+            border: #aa1423 1px solid;
+            border-radius: 7px 7px 0px 0px !important;
+        }
+
+        .rules_huay {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 5px;
+            margin-left: 28%;
+        }
+
+        .pr-3 {
+            padding-right: 0.75rem !important;
+        }
+
+        .pr-md-5 {
+            padding-right: 3rem !important;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(178deg, #f6e593, #8a5a06, #822e00, #cb5a5a, #4d0000);padding:0px 0px;margin:0px;">
+    <div class="container" style="
+    padding: 0px !important;
+    width: 100% !important;
+"><amp-auto-ads type="adsense" data-ad-client="ca-pub-6618273525349392"> </amp-auto-ads>
+<script async src="https://cse.google.com/cse.js?cx=d987b7693bb4c6406"></script>
+<div class="gcse-search"></div> 
+    <div class="col-12" style="text-align: center;padding: 0px;margin: 0px !important;">
+        <div style="    border-bottom: 6px inset #a08500;background: linear-gradient(180deg, rgb(243 243 243), hsl(0deg 0% 100%), #bcbcbc, rgb(216 216 216));margin:0px 0px auto;padding: 10px;border-radius: 5px;font-family: 'Mitr', sans-serif;/* background: linear-gradient(180deg, rgb(165 227 213), hsl(195deg 64% 80% / 54%), #00ffc0, rgb(28 79 92 / 76%)); */background-image: linear-gradient(160deg, #a54e073d, #b47e1100, #fef1a2a1, #bc881b3d, #a54e0700);background-image: linear-gradient(160deg, #b77d17, #e3c76c, #fef1a2, #d2ab4c, #c79837);">
+            <div class="row" style="margin: 0px 5px 15px 5px;">
+                <div class="col-2" style="font-size: 15px;text-align: center;font-family: 'Mitr', sans-serif;">รอบ</div>
+                <div class="col-6" style="font-size: 15px;text-align: center;font-family: 'Mitr', sans-serif;font-weight: bolder;">งวดประจำวันที่</div>
+                <div class="col-4" style="font-size: 15px;text-align: center;font-family: 'Mitr', sans-serif;font-weight: bolder;">เวลา</div>
+                <div class="col-2 runround" style="font-size: 14px;text-align: center;border: 1px solid #6b4e0d;/* background: linear-gradient(178deg, rgb(255 255 255), hsl(0deg 0% 89%), #f0f0f0, rgb(255 255 255)); */">1</div>
+                <div class="col-6 rundate" style="font-size: 14px;text-align: center;border: 1px solid #6b4e0d;/* background: linear-gradient(178deg, rgb(255 255 255), hsl(0deg 0% 89%), #f0f0f0, rgb(255 255 255)); */">20/05/99</div>
+                <div class="col-4 runtime" style="font-size: 14px;text-align: center;border: 1px solid #6b4e0d;/* background: linear-gradient(178deg, rgb(255 255 255), hsl(0deg 0% 89%), #f0f0f0, rgb(255 255 255)); */">00:00:00</div>
+            </div>
+            <div style="display: flex;flex-direction: row;align-content: center;justify-content: center;margin: 5px;">
+                <div class="col-auto" style="height: 75px;width: 20%;font-size:48px;text-align: center;background: linear-gradient(178deg, rgb(191 191 191), hsl(0deg 0% 89%), #f0f0f0, rgb(255 255 255));border: 1px solid #ffffff;"><span class="num1" style="color: #ffffff;display: block;width: 100%;text-shadow: 2px 1px 1px #530b09;justify-content: center;border: 2px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 2px #cea444;padding: 0px;margin: 0px;">9</span></div>
+                <div class="col-auto" style="height: 75px;width: 20%;font-size:48px;text-align: center;background: linear-gradient(178deg, rgb(191 191 191), hsl(0deg 0% 89%), #f0f0f0, rgb(255 255 255));border: 1px solid #ffffff;"><span class="num2" style="color: #14035e;color: #ffffff;display: block;width: 100%;text-shadow: 2px 1px 1px #a95b00;justify-content: center;border: 2px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 2px #cea444;padding: 0px;margin: 0px;">9</span></div>
+                <div class="col-auto" style="height: 75px;width: 20%;font-size:48px;text-align: center;background: linear-gradient(178deg, rgb(191 191 191), hsl(0deg 0% 89%), #f0f0f0, rgb(255 255 255));border: 1px solid #ffffff;"><span class="num3" style="color: #14035e;text-shadow: 2px 1px 1px #a95b00;color: #ffffff;display: block;width: 100%;text-shadow: 2px 1px 1px #b20000;justify-content: center;border: 2px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 2px #cea444;padding: 0px;margin: 0px;">9</span></div>
+                <div class="col-auto" style="height: 75px;width: 20%;font-size:48px;text-align: center;background: linear-gradient(178deg, rgb(191 191 191), hsl(0deg 0% 89%), #f0f0f0, rgb(255 255 255));border: 1px solid #ffffff;"><span class="num4" style="color: #14035e;text-shadow: 2px 2px 1px #959595;color: #ffffff;display: block;width: 100%;text-shadow: 2px 1px 1px #a95b00;justify-content: center;border: 2px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 2px #cea444;padding: 0px;margin: 0px;">9</span></div>
+                <div class="col-auto" style="height: 75px;width: 20%;font-size:48px;text-align: center;background: linear-gradient(178deg, rgb(191 191 191), hsl(0deg 0% 89%), #f0f0f0, rgb(255 255 255));border: 1px solid #ffffff;"><span class="num5" style="color: #14035e;text-shadow: 2px 2px 1px #959595;color: #ffffff;display: block;width: 100%;text-shadow: 2px 1px 1px #a95b00;justify-content: center;border: 2px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 2px #cea444;padding: 0px;margin: 0px;">9</span></div>
+            </div>
+            <div class="row" style="margin: 10px 0px;width: 100%;justify-content: space-evenly;text-align: center;padding: 0px;display: flex;flex-direction: row;flex-wrap: wrap;align-content: center;">
+                <div class="col-6" style="font-family: 'Mitr', sans-serif;font-weight: bolder;padding: 5px;">สามตัวบน</div>
+                <div class="col-2"></div>
+                <div class="col-4" style="font-family: 'Mitr', sans-serif;font-weight: bolder;padding: 5px;">สองตัวล่าง</div>
+                <div class="col-2" style="height:60px;font-size:40px;text-align: center;padding: 0;margin: 0;width: auto;"><span class="num3" style="color: #14035e;text-shadow: 2px 2px 1px #959595;color: #ffffff;display: block;width: 45px;text-shadow: 2px 1px 1px #a95b00;justify-content: center;border: 1px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 3px #bd9a43;padding: 0px;margin: 0px;">X</span></div>
+                <div class="col-2" style="height:60px;font-size:40px;text-align: center;padding: 0;margin: 0;width: auto;"><span class="num4" style="color: #14035e;text-shadow: 2px 2px 1px #959595;color: #ffffff;display: block;width: 45px;text-shadow: 2px 1px 1px #a95b00;justify-content: center;border: 1px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 3px #bd9a43;padding: 0px;margin: 0px;">X</span></div>
+                <div class="col-2" style="height:60px;font-size:40px;text-align: center;padding: 0;margin: 0;width: auto;"><span class="num5" style="color: #14035e;text-shadow: 2px 2px 1px #959595;color: #ffffff;display: block;width: 45px;text-shadow: 2px 1px 1px #a95b00;justify-content: center;border: 1px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 3px #bd9a43;padding: 0px;margin: 0px;">X</span></div>
+                <div class="col-2"></div>
+                <div class="col-2" style="height:60px;font-size:40px;text-align: center;padding: 0;margin: 0;width: auto;"><span class="num1" style="color: #14035e;text-shadow: 2px 2px 1px #959595;color: #ffffff;display: block;width: 45px;text-shadow: 2px 1px 1px #a95b00;justify-content: center;border: 1px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 3px #bd9a43;padding: 0px;margin: 0px;">X</span></div>
+                <div class="col-2" style="height:60px;font-size:40px;text-align: center;padding: 0;margin: 0;width: auto;"><span class="num2" style="color: #14035e;text-shadow: 2px 2px 1px #959595;color: #ffffff;display: block;width: 45px;text-shadow: 2px 1px 1px #a95b00;justify-content: center;border: 1px outset;border-radius: 1px;overflow: hidden;border-color: #e0ba30;background: #000000;box-shadow: 0px 0px 0px 3px #bd9a43;padding: 0px;margin: 0px;">X</span></div>
+            </div>
+        </div>
+        <img src="https://yeekeemeta.com/YEEKEEMETA.gif" width="100%" style="padding: 10px;margin: 5px;/* max-width: 300px; */font-family: 'Fredoka One', cursive !important;font-size: 40px;width: 100%;border-radius: 5px;color: #eaff07;text-shadow: 1px 1px 1px black;background-size: 150% 150%;border: 1px solid #ebd27d7d;background: url(https://png.pngtree.com/thumb_back/fh260/background/20210715/pngtree-honeycomb-geometric-red-stereo-halo-hexagon-background-image_742350.jpg),linear-gradient(160deg, #ff5757, #fa450f45, #ff3636ba, #ef2e0000, #ff000085);background-size: 151%;background-position: top;place-self: center;padding: 0 30px;margin: 0px auto;box-shadow: 0px 0px 0px 1px #0000004a;align-items: center;justify-content: center;">
+    </div>
+    <div style="padding: 5px;background: url(https://png.pngtree.com/thumb_back/fh260/background/20210715/pngtree-honeycomb-geometric-red-stereo-halo-hexagon-background-image_742350.jpg),linear-gradient(160deg, #ff5757, #fa450f45, #ff3636ba, #ef2e0000, #ff000085);background-size: 151%;background-position: top;" class="accordion" id="accordionExample">
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="title_modal">กติกา</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalbody" style="font-size: small;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <input id="proid" name="proid" type="hidden" value="">
+    <input id="awards" name="awards" type="hidden" value="">
+    <script>
+        function decodeHTMLEntities(text) {
+            var textArea = document.createElement('textarea');
+            textArea.innerHTML = text;
+            return textArea.value;
+        }
+
+        function encodeHTMLEntities(text) {
+            var textArea = document.createElement('textarea');
+            textArea.innerText = text;
+            return textArea.innerHTML;
+        }
+        function getdatapi(url, name) {
+            $('#title_modal').html(name);
+            $('#modalbody').html(decodeHTMLEntities(url));
+            // $('.URL').html('<a href="https://lotto.huaymeta.com/result?id=' + url + '" target="bank">เชคผลหวย</a>');
+        }
+        let ic_ticket = ''; //' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ticket" viewBox="0 0 16 16"><path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13Z"/></svg>';
+        let ic_star = ''; //' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16"><path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/></svg>';
+        let ic_meta = ''; //' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/></svg>';
+        let ic_trophy = ''; //' <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trophy" viewBox="0 0 16 16"><path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/></svg>';
+        $.getJSON('https://huay.services/group', function(str) {
+            $.each(str, function(i, item) {
+                html = '';
+                if (str[i].images) {
+                    html = '<div id="accordion">';
+                    html += '<div class="card-' + str[i].group + '">';
+                    html += '<div class="card-header" id="' + str[i].group + '">';
+                    html += '<h5 class="mb-0">';
+                    html += '<button class="btn btn-link w-100 text-dark font20 bg-light" data-toggle="collapse" data-target="#collapseOne' + str[i].group + '" aria-expanded="true" aria-controls="collapseOne">';
+                    html += ' ' + str[i].name + ' <i class="fas fa-angle-down" style="position: absolute; right: 16px; top: 21px;"></i>';
+                    html += '</button>';
+                    html += '</h5>';
+                    html += '</div>';
+                    html += '<div id="collapseOne' + str[i].group + '" class="collapse" aria-labelledby="' + str[i].group + '" data-parent="#accordion">';
+                    html += '<div class="card-body  accordion-item p-0">';
+                    html += '<div class="accordion-body px-2 py-0"><span class="row GROUP' + str[i].group + '"></span><span class="row LGROUP' + str[i].group + '"></span></div>';
+                    html += '</div>';
+                    html += '</div>';
+                    html += '</div></div><script>getlotto("' + str[i].group + '","' + str[i].icon + '");<\/script>';
+                    $(html).appendTo('.accordion');
+                }
+            });
+        });
+
+        function appentModal(title, body, group, gameround_id, id) {
+            clearInterval();
+            clearTimeout();
+            var sweet_loader = '<div class="sweet_loader" style="overflow: hidden;position: fixed;width: 100%;z-index: 10;background: #010b3d70;top:0px;bottom:0px;height: 100%;padding: 50% 49%;color: antiquewhite;"><div class="spinner-border" style=""></div></div>';
+            $('body').prepend(sweet_loader);
+            if (group == 'huay_set') {
+                gox = 'lottery-set';
+            } else {
+                gox = 'lottery-check';
+            }
+        }
+        var Username = NULL;
+        function GOTO(str) {
+            return  Swal.fire(
+                'โหมดผู้ชม',
+                'กรุณาเข้าสู่ระบบ',
+                );
+        }
+        function getlotto(group, ic) {
+            $.getJSON('https://huay.services/product?group=' + group+'&v=2', function(str) {
+                $('.GROUP' + group).html('');
+                $.each(str, function(i, item) {
+                    // AGOTO = '';
+                    closetime = '';
+                    icon_s = '';
+                    //tag = '';
+                    addanimate = '';
+                    htmldata = '';
+                    if (str[i].award5) {
+                        ixshow = 'xshow';
+                        rshow = 'xhide';
+                    } else {
+                        ixshow = 'xhide';
+                        rshow = '';
+                    }
+                    today = new Date();
+                    if (closetime != '') {
+                        str[i].HIS = 'จบเกมแล้ว';
+                        addanimate = '';
+                    }
+                    if (str[i].timeout.H + str[i].timeout.I <= 5 && str[i].HIS != 'จบเกมแล้ว') {
+                        run_auto = '1';
+                        addanimate = '  animation-name:example2;animation-duration: 1s;animation-iteration-count: infinite;';
+                    }
+                    gamecode = '';
+                    tag =  gamecode+'?id=' + str[i].gid + '&proid=' + str[i].proid + '&gid=' + str[i].gid + '&key=' + Username + '&group=' + str[i].group + '&name=' + str[i].txt + '';
+                    if (!str[i].award3) {
+                        str[i].award3 = 'XXX';
+                        str[i].award5 = 'XX';
+                    }
+                    AGOTO = "GOTO('#');";
+                    if (str[i].opengame == 'เปิด') {
+                        checkgame = "gameopen";
+                    } else {
+                        checkgame = "gameclose";
+                        closetime = ' boxclose';
+                        str[i].HIS = 'ปิดรับแทง';
+                    }
+                    if (group == 'thailotto') {
+                        modelotto = 'col-12  col-md-12';
+                    } else {
+                        modelotto = 'col-6  col-md-4';
+                    }
+                    if (group == 'yeeke') {
+                        str[i].icon = '//huaymeta.com/mt-logo?v2';
+                    }
+                    htmldata = '<div class="' + modelotto + '  p-1 my-0  G' + str[i].idRound + '">';
+                    htmldata += '<div class="lotto-card2 ' + closetime + '">';
+                    htmldata += '<div class="' + checkgame + '"><img src="' + str[i].icon + '" class="type_pratade"></div>';
+                    htmldata += '<div class="col-8 col-md-6 lotto-head2 lotto-yeekee2 id' + str[i].id + '">';
+                    htmldata += str[i].name;
+                    htmldata += '<div   onclick="' + AGOTO + '" class="lineh10">';
+                    htmldata += '<span style="width: 100%;" class="badge badge-dark">' + str[i].date + ' ' + str[i].time + '</span>';
+                    htmldata += '<div class="row" style="margin:0px;  display:none;">';
+                    htmldata += '<div class="col-6" style="border: 1px solid;">';
+                    htmldata += '<div class="title-type text-center m-1 " style="font-size: 14px;">3ตัวบน</div>';
+                    htmldata += '<div class="number text-center m-1 p-2 ' + group + 'digit3_' + str[i].id + '" style="background: #2c2f32;border-radius: 4px;"> ' + str[i].award3 + ' </div>';
+                    htmldata += '</div>';
+                    htmldata += '<div class="col-6" style="border: 1px solid;">';
+                    htmldata += '<div class="title-type text-center m-1" style="font-size: 14px;">2ตัวล่าง</div>';
+                    htmldata += '<div class="number text-center m-1 p-2 ' + group + 'digit2_' + str[i].id + '" style="background: #2c2f32;border-radius: 4px;"> ' + str[i].award5 + ' </div>';
+                    htmldata += '</div>';
+                    htmldata += '</div>';
+                    htmldata += '<a class="col-12 lotto-time text-success bg-white" style=" ' + addanimate + '" href="#">';
+                    htmldata += '<i class="' + icon_s + '" style="font-size: 28px;"></i>';
+                    htmldata += '<div class="text-right"><span class="' + str[i].idRound + '">' + str[i].HIS + '</span></div>';
+                    htmldata += '</a>';
+                    htmldata += '</div>';
+                    htmldata += '<div class="row mt-1"><div class="col-6 "><span class="w-100 badge bg-light text-dark" onclick="' + "getdatapi('" + encodeHTMLEntities(str[i].rules) + "','" + str[i].name + "');" + '"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="z-index:1000;">กติกา</span></div>';
+                    htmldata += '<div class="col-6"><span class="w-100 badge bg-light text-dark" onclick="' + AGOTO + '">เข้าเล่น</span></div></div>';
+                    if (str[i].HIS !== 'ปิดรับแทง') {
+                        startTimer(str[i].idRound, 'G' + str[i].idRound);
+                        $(htmldata).appendTo('.GROUP' + group);
+                    } else {
+                        $(htmldata).appendTo('.LGROUP' + str[i].group);
+                    }
+                });
+            });
+        }
+        function startTimer(tttt, id) {
+            var presentTime = $('.' + tttt).text();
+            var timeArray = presentTime.split(/[:]+/);
+            var h = timeArray[0];
+            var m = timeArray[1];
+            var s = checkSecond((timeArray[2] - 1));
+            if (s == 59) {
+                m = m - 1
+            }
+            $('.' + tttt).html(h + ":" + m + ":" + s);
+            if (m + s <= 0) {
+                $('.' + id).fadeOut();
+            }
+            setTimeout(function() {
+                startTimer(tttt, id);
+            }, 1000);
+        }
+
+        function checkSecond(sec) {
+            if (sec < 10 && sec >= 0) {
+                sec = "0" + sec
+            };
+            if (sec < 0) {
+                sec = "59"
+            };
+            return sec;
+        }
+
+        function runnumber(match, type, stop, loop, auto, loadtime) {
+            a = Math.floor(Math.random() * 10);
+            if (auto == 'stop') {
+                $('.' + match).fadeOut(1000).html(type);
+                $('.' + match).fadeIn(2000);
+                return false;
+            }
+            $('.' + match).html(a);
+            if (loop <= 0) {
+                auto = 'stop';
+            }
+            setTimeout(function() {
+                loop -= 50;
+                runnumber(match, type, stop, loop, auto, loadtime);
+            }, loadtime);
+        }
+
+        function runAwards(i, n, a, b, c, d, e, att) {
+            run_auto = 'stop';
+            auto = 1;
+            loadtime = 50;
+            setTimeout(function() {
+                runnumber('num1', a, 2500, att, 1, loadtime);
+            }, 2500);
+
+            setTimeout(function() {
+                runnumber('num2', b, 2500, att, 1, loadtime);
+            }, 2500);
+
+            setTimeout(function() {
+                runnumber('num3', c, 2000, att, 1, loadtime);
+            }, 2500);
+
+            setTimeout(function() {
+                runnumber('num4', d, 1500, att, 1, loadtime);
+            }, 1500);
+
+            setTimeout(function() {
+                runnumber('num5', e, 1000, att, 1, loadtime);
+            }, 1000);
+        }
+
+        var run_auto = '1';
+
+        function running(match, type, stop, loop, loadtime) {
+            a = Math.floor(Math.random() * 10);
+            if (run_auto == 'stop') {
+                return false;
+            }
+            $('.' + match).html(a);
+            setTimeout(function() {
+                running(match, type, stop, loop, loadtime);
+            }, loadtime);
+        }
+        $.getJSON('//yeekeemeta.com/awards', function(str) {
+            str = str[0];
+
+            $('title').html(str.txt);
+            $('.runround').html(str.Round);
+            if (str.name) {
+                $('.aw_title').html(str.name);
+            }
+            if (str.txt) {
+                $('.aw_title').html(str.txt);
+            }
+            $('#awards').val(str.award1);
+            $('#proid').val(str.proid)
+            $('.rundate').html(str.date);
+            $('.runtime').html(str.time);
+            $('.num1').html(str.awards[0]);
+            $('.num2').html(str.awards[1]);
+            $('.num3').html(str.awards[2]);
+            $('.num4').html(str.awards[3]);
+            $('.num5').html(str.awards[4]);
+        });
+        var clear = 0;
+        function runwailt() {
+            if(clear == 1){ return false;}
+            num1 = Math.floor(Math.random() * 10);
+            num2 = Math.floor(Math.random() * 10);
+            num3 = Math.floor(Math.random() * 10);
+            num4 = Math.floor(Math.random() * 10);
+            num5 = Math.floor(Math.random() * 10);
+            if ($('#awards').val() == '') {
+                return false;
+            }
+            if ($('#awards').val() == 'xxxxx') {
+                $('.num1').html(num1);
+                $('.num2').html(num2);
+                $('.num3').html(num3);
+                $('.num4').html(num4);
+                $('.num5').html(num5);
+            } else {
+                if ($('#awards').val().split("")) {
+                    awards = $('#awards').val().split("");
+                    num1 = awards[0];
+                    num2 = awards[1];
+                    num3 = awards[2];
+                    num4 = awards[3];
+                    num5 = awards[4];
+                    if (num1 == $('.num1').html() && num2 == $('.num2').html() && num3 == $('.num3').html()) {
+                        return false;
+                    }
+                    $('.num1').fadeOut(500).html(num1).fadeIn(500);
+                    $('.num2').fadeOut(500).html(num2).fadeIn(500);
+                    $('.num3').fadeOut(500).html(num3).fadeIn(500);
+                    $('.num4').fadeOut(500).html(num4).fadeIn(500);
+                    $('.num5').fadeOut(500).html(num5).fadeIn(500);
+                    return false;
+                }
+            }
+        }
+        setInterval(function() {
+            runwailt();
+        }, 50);
+        var Service = "HUAY";
+        var projectId = 'broadcast-d4309';
+        var Account = Username;
+        var config = {
+            databaseURL: "https://" + projectId + ".firebaseio.com",
+        };
+        var Service = "HUAY";
+        var projectId = 'broadcast-d4309';
+
+        var config = {
+            databaseURL: "https://" + projectId + ".firebaseio.com",
+        };
+        setTimeout(function() {
+            firebase.initializeApp(config);
+            firebase.database().ref(Service).on('value', function(snapshot) {
+                var childKey = snapshot.key;
+                var newPost = snapshot.val();
+                if (newPost !== "undefined") {
+                    $.each(newPost, function(main, sub) {
+                        if (childKey !== "undefined" && main == 'YK' && sub.proid !== $('#proid').val()) {
+                            $('.AWARDS').fadeIn(2000);
+                            $('#proid').val(sub.proid);
+                            $('#awards').val(sub.award1);
+                            $('.aw_title').html('YeekeeMeta ' + sub.Round);
+                            $('title').html(sub.txt);
+                            $('.runtime').html(sub.time);
+                            $('.rundate').html(sub.date);
+                            $('.runround').html(sub.Round);
+                        }
+                    });
+                }
+            });
+        }, 1000);
+    </script>
