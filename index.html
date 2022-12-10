@@ -679,10 +679,9 @@
                 gox = 'lottery-check';
             }
         }
-        var Username = NULL;
         function GOTO(str) {
             return  Swal.fire(
-                'โหมดผู้ชม',
+                'LOGIN',
                 'กรุณาเข้าสู่ระบบ',
                 );
         }
@@ -713,7 +712,7 @@
                         addanimate = '  animation-name:example2;animation-duration: 1s;animation-iteration-count: infinite;';
                     }
                     gamecode = '';
-                    tag =  gamecode+'?id=' + str[i].gid + '&proid=' + str[i].proid + '&gid=' + str[i].gid + '&key=' + Username + '&group=' + str[i].group + '&name=' + str[i].txt + '';
+                   
                     if (!str[i].award3) {
                         str[i].award3 = 'XXX';
                         str[i].award5 = 'XX';
@@ -912,7 +911,6 @@
         }, 50);
         var Service = "HUAY";
         var projectId = 'broadcast-d4309';
-        var Account = Username;
         var config = {
             databaseURL: "https://" + projectId + ".firebaseio.com",
         };
